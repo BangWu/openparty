@@ -1,0 +1,52 @@
+<body class="blog ">
+<img src="https://dn-coding-net-production-pp.qbox.me/3bdc0e16-c982-4d6b-9d53-990cf90f354e.jpg" width="0" height="0" style="position: absolute;">
+
+<div class="wrapper">
+  <header id="branding">
+  </header>
+  <section>
+    <div id="main">
+      <div class="container clearfix">
+        <link href="/css/typo.css" rel="stylesheet">
+        <script src="/api/blog/visit/what-we-did-for-safety-cloudcomputing"></script>
+        <div id="blogs-container">
+          <section class="blog-container clearfix">
+            <div class="timeline-box">
+              <div class="timeline">
+                <div class="category">
+                  <i class="icomoon-uniE6DC"></i>
+                </div>
+                <div class="time"><%= @item.updated_at.strftime("%d %b") %></div>
+                <div class="author"><a href="/author/panpan"><%= @item.author %></a></div>
+              </div>
+            </div>
+            <div class="blog-box">
+              <div class="blog-view">
+                <div class="title clearfix underline" style="color: #0078c9"><%= @item.title %></div>
+                <div class="content markdown typo">
+                  <%= @item.body.html_safe %>
+                </div>
+                <div class="info">
+                  <div class="avatar">
+                    <img src="https://dn-coding-net-public-image.qbox.me/07765d7c-ef4c-4bf9-ad56-f5f4cbeb3bbb.jpg">
+                  </div>
+                  <span class="name"><a><%= @item.author %></a></span>
+                  <span class="views"><i class="icomoon-eye"></i>178</span>
+                  <span class="comments"><i class="icomoon-chat"></i>0</span>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="colophon" class="clearfix">
+    <div class="back-to-top" style="display: block;">
+      <a href="#branding" title="回到顶部"><img src="/images/monkey_48_48_w.png" width="32"></a></div>
+  </footer>
+</div>
+
+
+</body>

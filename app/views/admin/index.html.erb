@@ -1,0 +1,33 @@
+<%= form_for @item do |f| %>
+    <p>
+      <%= f.label :autor %><br>
+      <%= f.text_field :author %>
+    </p>
+
+    <p>
+      <%= f.label :title %><br>
+      <%= f.text_field :title %>
+    </p>
+
+    <p>
+      <%= f.label :topic %><br>
+      <%= f.text_area :topic %>
+    </p>
+
+    <p>
+      <%= f.label :picture %><br>
+      <%= f.file_field :picture, multiple: false %>
+    </p>
+    <p>
+      <%= f.label :description %><br>
+      <%= f.cktext_area :description %>
+    </p>
+    <p>
+      <%= f.label :body %><br>
+      <%= f.cktext_area :body %>
+    </p>
+
+    <p>
+      <%= f.submit %>
+    </p>
+<% end %>

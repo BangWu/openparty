@@ -1,2 +1,59 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+</head>
+<body class="blog ">
+<div class="wrapper">
+  <header id="branding">
+  </header>
+  <section>
+    <div id="main">
+      <div class="container clearfix">
+        <div id="blogs-container" xmlns="http://www.w3.org/1999/html">
+          <div id="only-title" class="only-title" onclick="setOnlyTitle()">
+            <div>
+              <div class="triangle"></div>
+              <i class="icomoon-list"></i>
+            </div>
+          </div>
+          <% @items.each do |item| %>
+              <section class="blog-container clearfix">
+                <div class="timeline-box">
+                  <div class="timeline">
+                    <div class="category">
+                      <i class="icomoon-uniE6DC"></i>
+                    </div>
+                    <div class="time"><%= item.updated_at.strftime("%d %b") %></div>
+                    <div class="author"><a href="/author/panpan"><%= item.author %></a></div>
+                  </div>
+                </div>
+                <div class="blog-box">
+                  <div class="blog-detail">
+                    <div class="title"><a href="/items/<%= item.id %>"><%= item.title %></a>
+                    </div>
+                    <div class="cover">
+                      <img src="<%= item.picture.url %>">
+                    </div>
+                    <div class="content mui-ellipsis-3"><%= item.description.html_safe%>
+                    </div>
+
+                    <div class="stat">
+                      <span class="views"><a href="/blog/what-we-did-for-safety-cloudcomputing"><i class="icomoon-eye"></i></a></span>
+                      <span class="comments"><a href="/blog/what-we-did-for-safety-cloudcomputing#comments"><i class="icomoon-chat"></i></a></span>
+                    </div>
+                  </div>
+                </div>
+              </section>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="colophon" class="clearfix">
+  </footer>
+</div>
+
+
+</body>
+<div></div>
+<span class="gr__tooltip"><span class="gr__tooltip-content"></span><i class="gr__tooltip-logo"></i><span class="gr__triangle"></span></span>
